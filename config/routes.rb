@@ -1,4 +1,6 @@
 FormObjectErrors::Application.routes.draw do
+  resources :registrations, only: [:index, :create]
+  root to: 'registrations#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

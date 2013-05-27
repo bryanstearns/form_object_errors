@@ -1,0 +1,27 @@
+<h1>Registrations</h1>
+
+<%= form_for @registration do |f| %>
+  <%= f.label :login %>
+  <%= f.text_field :login %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+
+<% if @users.empty? %>
+<h3>No users yet.</h3>
+<% else %>
+<table>
+	<thead>
+		<tr>
+			<td>ID</td>
+			<td>Name</td>
+			<td>Login</td>
+	    </tr>
+	</thead>
+	<tbody>
+	  <% @users.each do |user| %>
+	  <% end %>
+	</tbody>
+</table>
+<% end %>
